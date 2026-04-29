@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html lang="uk" data-bs-theme="dark">
+    <head>
+				<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Моніторинг розумного будинку">
+        <meta name="keywords" content="розумний будинок, сонячна енергія, iot">
+        <title>Моніторинг будинку</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Nerd Fonts -->
+        <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+		<script src="js/app.js"></script>
+    <body>
+        <!-- Контент -->
+				<section id="dashboard" class="mb-5">
+					<div class="d-flex justify-content-between align-items-end border-bottom border-3 pb-2 mb-4">
+						<h2 class="mb-0">Панель моніторингу</h2>
+						<div class="text-end">
+							<small class="text-secondary">Останнє оновлення: <span id="last-update" class="text-light">--:--:--</span></small>
+						</div>
+					</div>
+
+					<div class="mb-4 d-flex gap-2">
+						<button id="btn-update" class="btn btn-outline-warning"><i class="nf nf-md-refresh"></i> Оновити дані</button>
+						<button id="btn-auto" class="btn btn-outline-success"><i class="nf nf-md-history"></i> Автооновлення: <span id="auto-status">Вимк</span></button>
+					</div>
+
+				<div class="row g-4 mb-4" data-bs-theme="dark">
+					<div class="col-md-3">
+						<div class="card bg-dark border-secondary text-center h-100 shadow">
+							<div class="card-body">
+								<h6 class="text-secondary text-uppercase mb-3">Споживання</h6>
+								<h2 class="display-5 mb-0" id="val-consumption">0.0</h2>
+								<span class="text-secondary">кВт</span>
+								<div id="status-consumption" class="mt-2 fs-5">⚫</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card bg-dark border-secondary text-center h-100 shadow">
+							<div class="card-body">
+								<h6 class="text-secondary text-uppercase mb-3">СЕС Генерація</h6>
+								<h2 class="display-5 mb-0" id="val-generation">0.0</h2>
+								<span class="text-secondary">кВт</span>
+								<div id="status-generation" class="mt-2 fs-5">⚫</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card bg-dark border-secondary text-center h-100 shadow">
+							<div class="card-body">
+								<h6 class="text-secondary text-uppercase mb-3">Заряд АКБ</h6>
+								<h2 class="display-5 mb-0" id="val-battery">0</h2>
+								<span class="text-secondary">%</span>
+								<div id="status-battery" class="mt-2 fs-5">⚫</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card bg-dark border-secondary text-center h-100 shadow">
+							<div class="card-body">
+								<h6 class="text-secondary text-uppercase mb-3">Температура</h6>
+								<h2 class="display-5 mb-0" id="val-temperature">0.0</h2>
+								<span class="text-secondary">°C</span>
+								<div id="status-temperature" class="mt-2 fs-5">⚫</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-4">
+					<div class="col-md-4">
+						<div class="p-3 bg-dark border border-secondary rounded">
+							<span class="text-secondary"><i class="nf nf-md-scale_balance"></i> Енергобаланс:</span>
+							<strong class="float-end fs-5" id="val-balance">0.0 кВт</strong>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="p-3 bg-dark border border-secondary rounded">
+							<span class="text-secondary"><i class="nf nf-md-air_conditioner"></i> Кондиціонер:</span>
+							<strong class="float-end fs-5" id="val-ac">Вимкнено</strong>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="p-3 bg-dark border border-secondary rounded">
+							<span class="text-secondary"><i class="nf nf-md-piggy_bank"></i> Прогноз економії:</span>
+							<strong class="float-end fs-5 text-success" id="val-savings">0 ₴/доба</strong>
+						</div>
+					</div>
+				</div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

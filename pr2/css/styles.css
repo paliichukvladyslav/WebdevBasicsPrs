@@ -1,0 +1,21 @@
+body {
+	font-family: monospace;
+	padding: 20px;
+	background-color: #0f0f11;
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+	background-size: 30px 30px;
+	position: relative;
+}
+
+.card {
+	background: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	text-align: center;
+	transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px) }
